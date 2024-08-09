@@ -1,0 +1,86 @@
+
+# Basic Git Commands
+git init                          # Initialize a new Git repository
+git clone <repository_url>        # Clone an existing repository
+git status                        # Check the status of your working directory
+git add <file_name>               # Add a specific file to the staging area
+git add .                         # Add all files to the staging area
+git commit -m "Your commit message"  # Commit changes with a message
+git push origin <branch_name>     # Push changes to a remote repository
+git pull origin <branch_name>     # Pull changes from a remote repository
+
+# Branching and Merging
+git checkout -b <new-branch-name> # Create and switch to a new branch
+git branch                        # List all branches
+git checkout <branch_name>        # Switch to another branch
+git merge <branch_name>           # Merge a branch into the current branch
+git branch -d <branch_name>       # Delete a branch
+git branch -D <branch_name>       # Force delete a branch
+
+# Undoing Changes
+git checkout -- <file_name>       # Undo changes in the working directory
+git reset <file_name>             # Unstage a file
+git revert <commit_hash>          # Revert a commit
+git reset --hard <commit_hash>    # Reset to a specific commit
+
+# Remote Repositories
+git remote add origin <remote_repository_url>  # Add a remote repository
+git remote remove <remote_name>  # Remove a remote repository
+git remote -v                    # List remote repositories
+git fetch origin                 # Fetch changes from a remote repository
+
+# Viewing History
+git log                          # View commit history
+git log --oneline                # View a summary of the commit history
+git diff <commit_1> <commit_2>   # Show changes between commits
+
+# Tagging
+git tag <tag_name>               # Create a new tag
+git push origin <tag_name>       # Push a tag to a remote repository
+git tag                          # List all tags
+
+# Stashing
+git stash                        # Stash changes
+git stash apply                  # Apply stashed changes
+git stash list                   # List stashed changes
+
+# Miscellaneous
+git config --global user.name "Your Name"  # Configure Git username
+git config --global user.email "youremail@example.com"  # Configure Git email
+git config --list                # View Git configuration
+
+
+
+
+#Adding code to a Git repository for the first time(this command gives you when you create a repo on github)
+
+git init
+git add .
+git commit -m "Initial commit"
+git remote add origin https://github.com/yourusername/your-repo-name.git
+git push -u origin main
+
+
+
+#Update old code in a Git repository after making changes in Visual Studio Code (VS Code)
+
+git status
+git add .
+git commit -m "Updated the old code"
+git pull origin main
+git push origin main
+
+
+#Remove the old remote repository from your Git configuration in VS Code
+
+git remote -v
+git remote remove origin
+git remote -v
+
+#Clone a repository
+git clone <repository_url>
+
+
+#Check the status of your working directory
+git status
+
